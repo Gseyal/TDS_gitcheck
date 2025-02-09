@@ -13,13 +13,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Identify user 21f2000646@ds.study.iitm.ac.in
-        run: echo "Running commit step"
+        run: echo "Running commit step for verification"
 
       - name: Make changes and commit
         run: |
           echo "Last run: $(date)" > last-run.txt
-          git config --global user.name "GitHub Action"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "Gautam Seyal"
+          git config --global user.email "gautamseyal2020@gmail.com"
           git add last-run.txt
           git commit -m "Automated commit on $(date)"
           git push
