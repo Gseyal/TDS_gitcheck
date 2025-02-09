@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Add a commit (Step with your email 21f2000646@ds.study.iitm.ac.in)
+      - name: Add a commit (Step with your email gautamseyal2020@gmail.com)
         run: |
           git config --global user.name "GitHub Actions"
-          git config --global user.email "21f2000646@ds.study.iitm.ac.in"
+          git config --global user.email "gautamseyal2020@gmail.com"
           date > timestamp.txt
           git add timestamp.txt
           git commit -m "Daily automated commit"
