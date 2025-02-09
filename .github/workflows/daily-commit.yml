@@ -1,0 +1,23 @@
+name: Daily Commit Workflow
+
+on:
+  schedule:
+    # Run daily at 12:00 PM UTC (adjust the cron syntax as needed)
+    - cron: '0 12 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Add a commit (Step with your email 21f2000646@ds.study.iitm.ac.in)
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "21f2000646@ds.study.iitm.ac.in"
+          date > timestamp.txt
+          git add timestamp.txt
+          git commit -m "Daily automated commit"
+          git push
