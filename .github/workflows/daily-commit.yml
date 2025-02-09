@@ -22,4 +22,4 @@ jobs:
           git config --global user.email "gautamseyal2020@gmail.com"
           git add last-run.txt
           git commit -m "Automated commit on $(date)"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
